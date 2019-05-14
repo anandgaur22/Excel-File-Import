@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_card_body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/fiveDip">
+
+    <LinearLayout
+        android:id="@+id/ll_hiding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_three"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/ll_card_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fiveDip"
+            android:layout_marginTop="@dimen/fiveDip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_last_paid_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/amount"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_last_paid_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_last_paid_amount"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_last_paid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/twoDip"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_last_paid_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/last_paid_date"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_last_paid_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_last_paid_date"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_four"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_card_one"
+            android:background="@color/light_blue_color" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_card_one1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_four"
+            android:layout_marginBottom="@dimen/fiveDip"
+            android:layout_marginTop="@dimen/fiveDip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/current"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_current"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twoDip"
+                android:layout_weight=".8"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_waived_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/waived_off"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_waived_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_waived_off"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_nine"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_card_one1"
+            android:background="@color/light_blue_color" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_card_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_nine"
+            android:layout_marginBottom="@dimen/fiveDip"
+            android:layout_marginTop="@dimen/fiveDip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/twoDip"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_enrolled_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/enrolled_by"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_enrolled_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_enrolled_by"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_allocated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/allocated"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_allocated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_allocated"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_five"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_card_two"
+            android:background="@color/light_blue_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_card_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_five"
+            android:layout_marginBottom="@dimen/fiveDip"
+            android:layout_marginTop="@dimen/fiveDip"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/twoDip"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_registered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/registered_for"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_registered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_registered"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twoDip">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/registered_by"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_by"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_six"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_card_three"
+            android:background="@color/light_blue_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_card_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_six"
+            android:layout_marginBottom="@dimen/fiveDip"
+            android:layout_marginTop="@dimen/fiveDip">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_spouse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/spouse"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:id="@+id/txt_view_spouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_spouse"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_seven"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_card_four"
+            android:background="@color/light_blue_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_seven"
+            android:layout_marginBottom="@dimen/fiveDip"
+            android:layout_marginTop="@dimen/fiveDip">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_view_lable_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/dob"
+                    android:textColor="@color/text_color_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twoDip"
+                    android:layout_toEndOf="@+id/txt_view_lable_dob"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_blue" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

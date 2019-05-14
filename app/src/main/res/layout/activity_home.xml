@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <Spinner
+            android:id="@+id/field_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:entries="@array/fieldArray">
+        </Spinner>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearlayout2"
+    android:layout_below="@+id/linearlayout1"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/search_field_editTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:hint="Search with above keyword"
+        />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="Search" />
+
+</LinearLayout>
+
+
+    <!--<Spinner
+        android:visibility="visible"
+        android:id="@+id/selected_data_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+    </Spinner>
+-->
+    <LinearLayout
+        android:id="@+id/linearlayout3"
+        android:layout_below="@+id/linearlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/recycler_view"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+       </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_view_path"
+            android:layout_width="0dp"
+            android:layout_weight="1.3"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            android:hint="Choose Excel path" />
+
+        <Button
+            android:id="@+id/btn_read_file"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="@string/read_file" />
+
+    </LinearLayout>
+
+
+
+   <!-- <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:text="@string/upload" />-->
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/linearlayout3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="76dp"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+
+</RelativeLayout>
